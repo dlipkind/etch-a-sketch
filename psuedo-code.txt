@@ -1,0 +1,45 @@
+JS
+
+grid = getElement <grid> from html
+let cell = document.querySelectorAll('cell');
+let btnSize = document.getElementById("button")
+
+
+let size = 32
+
+function createGrid {
+    for (i = 0, i < size, i++){
+        create "cell"
+        give "cell" class name ("cell")
+        return attach "cell" to grid — grid.appendChild(cell) ?;
+
+        // return cell = document.querySelectorAll('cell'); ???
+}
+
+cell.addEventListener('hover', function onHover() {
+    cell.style.backgroundColor = 'black';
+});
+
+btnSize.onclick = function changeGridSize() {
+    let sizeChoise = prompt("Please enter grid size: ", "32");
+    if (size <= 100 && size > 0):
+        return sizeChoise = size;
+    else 
+        prompt("The value has to be between 0 and 100. Try again: ");
+        return sizeChoise = size
+}
+------------------------------------------------------------------
+
+CSS
+
+.grid (<grid> from html) {
+	display: grid
+    set fixed size in px (960px)
+	set a grid inner size = (size / 2)
+}
+
+#cell {
+	set cell size to square
+    add borders (make them inner, not outer?)
+}
+	
